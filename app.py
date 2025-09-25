@@ -59,7 +59,7 @@ generation_config = {
     "temperature": 0.2,  # Low for deterministic JSON
     "top_p": 0.95,
     "top_k": 64,
-    "max_output_tokens": 8192,  # Increased for large responses
+    "max_output_tokens": 65535,  # Increased for large responses
     "response_mime_type": "application/json"  # Ensures strict JSON
 }
 
@@ -345,7 +345,7 @@ def call_gemini_with_retry(prompt, schema, max_retries=3):
             else:
                 st.error(f"Attempt {attempt + 1} failed. Failed to get valid JSON after {max_retries} attempts: {e}")
                 # For debugging, show the raw response that caused the JSON error
-                st.code(raw_response_for_debugging, language='json', label="Raw response causing JSON error (for debugging)")
+                st.code(raw_response_for_debugging, language='json')
                 raise Exception(f"Failed to get valid JSON after {max_retries} attempts: {e}")
         except Exception as e:
             if attempt < max_retries - 1:
@@ -362,7 +362,7 @@ def main():
     """
     Main function to run the Bewell AI Health Analyzer Streamlit app.
     """
-    st.title("🌿 Your Personal AI Health Assistant – HIPAA Secure by Bewell + Vertex AI (PV+5)")
+    st.title("🌿 Your Personal AI Health Assistant – HIPAA Secure by Bewell + Vertex AI (PV+6)")
     st.write("Upload your lab report(s) and health assessment files for a personalized analysis.")
 
     col1, col2 = st.columns(2)
