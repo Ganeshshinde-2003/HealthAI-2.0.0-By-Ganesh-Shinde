@@ -97,9 +97,9 @@ class UIConfig:
     MONTHLY_COMPLETE = "Monthly Report Generated!"
 
     # Headers
-    HEADER_MAIN_ANALYZER = "🌿 Your Personal AI Health Assistant – HIPAA Secure by HealthAI + HealthAI (PV+6)"
-    HEADER_MAIN_ANALYZER_TEST = "🌿 Your Personal AI Health Assistant – HIPAA Secure by HealthAI + HealthAI (PV+7) Testing the Prompt"
-    HEADER_MAIN_MONTHLY = "HealthAI Monthly Health Reporter – HIPAA Secure by HealthAI + HealthAI"
+    HEADER_MAIN_ANALYZER = "🌿 Your Personal AI Health Assistant – HIPAA Secure by HealthAI"
+    HEADER_MAIN_ANALYZER_TEST = "🌿 Your Personal AI Health Assistant – HIPAA Secure by HealthAI"
+    HEADER_MAIN_MONTHLY = "HealthAI Monthly Health Reporter – HIPAA Secure by HealthAI"
     HEADER_RESULTS = "🔬 Your Personalized HealthAI Analysis (Interactive JSON):"
     HEADER_RESULTS_MONTHLY = "✨ Your Personalized HealthAI Monthly Health Report:"
     HEADER_COPY_JSON = "📋 Copy Full JSON Output (Plain Text):"
