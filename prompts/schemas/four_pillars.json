@@ -1,0 +1,19 @@
+{
+  "four_pillars": {
+    "introduction": "string - Summarizes your health status and lab findings in simple terms for the four areas (eating, sleeping, moving, recovering).",
+    "pillars": [
+      {
+        "name": "string - Pillar name (e.g., 'Eat Well').",
+        "score": "integer - 1 (needs improvement) to 10 (great), based on your data (e.g., '4' for skipping meals).",
+        "score_rationale": ["string - A clear explanation in simple language for why your score was given, tied to your data (e.g., ['Your Eat Well score is 4 because **C1[skipping meals]C1** means you miss energy.', 'Eating regularly helps your body stay strong.'])."],
+        "why_it_matters": "string - Explains relevance to your data in simple terms (e.g., 'Good food helps balance your hormones for **C1[bloating]C1**, like fueling a car').",
+        "root_cause_correlation": "string - Links to root causes in simple terms (e.g., 'Fiber helps your **C1[constipation]C1** caused by low estrogen').",
+        "science_based_explanation": "string - Simple scientific basis (e.g., 'Fiber clears extra hormones to ease your **C1[mood swings]C1**, like cleaning out clutter').",
+        "additional_guidance": {
+          "description": "string - Explains guidance in simple terms, notes if general due to limited data (e.g., 'Since you provided no specific data, try these general tips for your health').",
+          "structure": "object - The keys in this object will vary based on the pillar, as per the instructions below. The values are arrays of objects. Example: `{'recommended_foods': [{'name': '...', 'description': '...'}]}`"
+        }
+      }
+    ]
+  }
+}

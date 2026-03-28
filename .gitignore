@@ -1,20 +1,66 @@
-# Ignore Streamlit secrets
-.streamlit/secrets.toml
+# HealthAI .gitignore
 
-# Python-related
+# Python
 __pycache__/
 *.py[cod]
-*.egg
+*$py.class
+*.so
+.Python
 *.egg-info/
-dist/
-build/
+*.egg
+
+# Virtual Environments
+venv/
+env/
+ENV/
+.venv
+
+# Streamlit Secrets
+.streamlit/secrets.toml
+.streamlit/config.toml
+
+# Google Cloud Credentials
+service-account-key.json
+credentials.json
+google-credentials.json
+
+# IDE
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Logs
+*.log
+logs/
+
+# Temporary Files
+*.tmp
+.cache/
+tmp/
+
+# User Data (Privacy)
+uploads/
+user_data/
+test_data/
+
+# Documentation (Keep Private)
+docs/
+*.md
+!README.md
 
 # Environment
 .env
-.venv
-venv/
-ENV/
+.env.local
 
-# OS files
-.DS_Store
-Thumbs.db
+# Backups
+*.bak
+*.backup
+*_backup.py
+*_old.py
+backup/
