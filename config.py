@@ -83,9 +83,9 @@ class UIConfig:
     """Streamlit UI configuration."""
 
     # Page Configuration
-    PAGE_TITLE_ANALYZER = "HealthAI AI Health Analyzer - HIPAA by HealthAI - VP1"
-    PAGE_TITLE_ANALYZER_TEST = "HealthAI AI Health Analyzer - HIPAA by HealthAI - VP1"
-    PAGE_TITLE_MONTHLY = "HealthAI AI Monthly Health Reporter - HIPAA by HealthAI"
+    PAGE_TITLE_ANALYZER = "HealthAI Health Analyzer - HIPAA by HealthAI - VP1"
+    PAGE_TITLE_ANALYZER_TEST = "HealthAI Health Analyzer - HIPAA by HealthAI - VP1"
+    PAGE_TITLE_MONTHLY = "HealthAI Monthly Health Reporter - HIPAA by HealthAI"
     PAGE_ICON_ANALYZER = "🌿"
     PAGE_ICON_MONTHLY = "🗓️"
     LAYOUT = "wide"
@@ -99,7 +99,7 @@ class UIConfig:
     # Headers
     HEADER_MAIN_ANALYZER = "🌿 Your Personal AI Health Assistant – HIPAA Secure by HealthAI + HealthAI (PV+6)"
     HEADER_MAIN_ANALYZER_TEST = "🌿 Your Personal AI Health Assistant – HIPAA Secure by HealthAI + HealthAI (PV+7) Testing the Prompt"
-    HEADER_MAIN_MONTHLY = "HealthAI AI Monthly Health Reporter – HIPAA Secure by HealthAI + HealthAI"
+    HEADER_MAIN_MONTHLY = "HealthAI Monthly Health Reporter – HIPAA Secure by HealthAI + HealthAI"
     HEADER_RESULTS = "🔬 Your Personalized HealthAI Analysis (Interactive JSON):"
     HEADER_RESULTS_MONTHLY = "✨ Your Personalized HealthAI Monthly Health Report:"
     HEADER_COPY_JSON = "📋 Copy Full JSON Output (Plain Text):"
@@ -122,8 +122,8 @@ class AppMetadata:
     DESCRIPTION = "AI-Powered Health Analysis Platform"
 
     # AI Attribution
-    AI_ASSISTANT_NAME = "HealthAI AI Assistant"
-    AI_ASSISTANT_MONTHLY_NAME = "HealthAI AI Monthly Health Report Assistant"
+    AI_ASSISTANT_NAME = "HealthAI Assistant"
+    AI_ASSISTANT_MONTHLY_NAME = "HealthAI Monthly Health Report Assistant"
 
 
 # ==========================================

@@ -71,7 +71,7 @@ HealthAI combines advanced AI with functional medicine principles to provide per
    streamlit run monthly_report.py
 
    # Prompt testing version (for developers)
-   streamlit run app2.py
+   streamlit run prompt_tester.py
    ```
 
 5. **Open in browser**
@@ -112,7 +112,7 @@ Longitudinal health tracking with trend analysis.
 
 ---
 
-### 3. Prompt Testing Version (`app2.py`)
+### 3. Prompt Testing Version (`prompt_tester.py`)
 Development version with live prompt editing.
 
 **Features:**
@@ -177,14 +177,6 @@ JSON Validation & Output
 
 ---
 
-## 📚 Documentation
-
-- **[product.md](product.md)** - Comprehensive product documentation
-- **[claude.md](claude.md)** - AI development tracking log
-- **[changelog.md](changelog.md)** - Version history and changes
-
----
-
 ## 🔒 Privacy & Security
 
 - ✅ No persistent storage of health data
@@ -197,47 +189,22 @@ JSON Validation & Output
 
 ---
 
-## 🛣️ Roadmap
-
-### Phase 1: Foundation Enhancement (Q2 2026)
-- [ ] Refactor shared code into utilities module
-- [ ] Add comprehensive test suite
-- [ ] Implement file size validation
-- [ ] Add type hints throughout codebase
-
-### Phase 2: Feature Expansion (Q3 2026)
-- [ ] User authentication and profiles
-- [ ] Data persistence and history tracking
-- [ ] Trend visualization (charts/graphs)
-- [ ] PDF report generation
-
-### Phase 3: Advanced Intelligence (Q4 2026)
-- [ ] Predictive health modeling
-- [ ] Wearable device integration
-- [ ] Optional cycle tracking and hormonal insights
-- [ ] Medication interaction checking
-
-### Phase 4: Platform Expansion (2027)
-- [ ] Mobile application (iOS/Android)
-- [ ] Practitioner dashboard
-- [ ] Telehealth integration
-
-See [product.md](product.md) for detailed roadmap.
-
----
-
 ## 📦 Project Structure
 
 ```
 ai-health-analyser/
 ├── app.py                  # Standard health analyzer
-├── app2.py                 # Prompt testing version
 ├── monthly_report.py       # Monthly health reporter
+├── prompt_tester.py        # Prompt testing version
 ├── requirements.txt        # Python dependencies
-├── README.md              # This file
-├── product.md             # Product documentation
-├── claude.md              # AI development log
-├── changelog.md           # Version history
+├── config.py              # Configuration settings
+├── utils/                 # Utility modules
+│   ├── ai_client.py       # AI client wrapper
+│   ├── display.py         # Display components
+│   ├── file_processor.py  # File handling
+│   ├── prompt_loader.py   # Prompt management
+│   └── validators.py      # JSON validation
+├── prompts/               # AI prompt templates
 └── .streamlit/
     └── secrets.toml       # Google Cloud credentials (not in repo)
 ```
@@ -266,9 +233,8 @@ Proprietary - All rights reserved by Ganesh Shinde.
 
 **Ganesh Shinde**
 
-- Created: March 2026
-- Purpose: Personal health analysis tool
-- Originally built for: Previous company (personal IP retained)
+- Personal health analysis platform
+- Built with passion for precision health and wellness
 
 ---
 
@@ -283,10 +249,7 @@ Proprietary - All rights reserved by Ganesh Shinde.
 
 ## 📧 Support
 
-For questions, issues, or feedback:
-- Review the [documentation](product.md)
-- Check the [changelog](changelog.md)
-- Open an issue on GitHub
+For questions, issues, or feedback, please open an issue on GitHub.
 
 ---
 
@@ -303,18 +266,6 @@ For questions, issues, or feedback:
 **Current Version:** 1.0.0
 **Release Date:** March 28, 2026
 **Status:** Production Ready (MVP)
-
-See [changelog.md](changelog.md) for version history.
-
----
-
-## 🔗 Quick Links
-
-- [Product Documentation](product.md) - Detailed feature guide
-- [Development Log](claude.md) - AI development tracking
-- [Version History](changelog.md) - Complete changelog
-- [Google Cloud Console](https://console.cloud.google.com) - Manage credentials
-- [Streamlit Docs](https://docs.streamlit.io) - Framework documentation
 
 ---
 

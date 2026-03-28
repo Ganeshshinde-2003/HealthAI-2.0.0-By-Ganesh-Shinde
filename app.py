@@ -187,12 +187,12 @@ Here is the user's Lab Report text (potentially multiple reports combined):
 
         # Analysis status
         with st.status(UIConfig.ANALYSIS_INITIATING, expanded=True) as status_message_box:
-            status_message_box.write("⚙️ Preparing data for analysis...")
+            status_message_box.write("⚙️ Preparing your data...")
 
             # ====================
             # Part 1: Biomarkers
             # ====================
-            status_message_box.write("🔬 Analyzing Biomarkers...")
+            status_message_box.write("🔬 Analyzing your biomarkers...")
             biomarker_prompt = build_biomarker_prompt(
                 raw_health_assessment_input,
                 lab_report_section_formatted
@@ -212,7 +212,7 @@ Here is the user's Lab Report text (potentially multiple reports combined):
             # ====================
             # Part 2: Four Pillars
             # ====================
-            status_message_box.write("💪 Moving to Four Pillars (Eat, Sleep, Move, Recover) analysis...")
+            status_message_box.write("💪 Analyzing your Four Pillars (Eat, Sleep, Move, Recover)...")
             four_pillars_prompt = build_four_pillars_prompt(
                 raw_health_assessment_input,
                 lab_report_section_formatted
@@ -232,7 +232,7 @@ Here is the user's Lab Report text (potentially multiple reports combined):
             # ====================
             # Part 3: Supplements
             # ====================
-            status_message_box.write("💊 Moving to Supplements analysis...")
+            status_message_box.write("💊 Creating your supplement recommendations...")
             supplements_prompt = build_supplements_prompt(
                 raw_health_assessment_input,
                 lab_report_section_formatted

@@ -178,7 +178,7 @@ def main():
     # ====================
     if st.button(UIConfig.BUTTON_MONTHLY, type="primary"):
         with st.status(UIConfig.MONTHLY_INITIATING, expanded=True) as status_message_box:
-            status_message_box.write("⚙️ Preparing data for AI analysis...")
+            status_message_box.write("⚙️ Preparing your data...")
 
             try:
                 # Prepare data sections for the prompt
@@ -201,7 +201,7 @@ def main():
                     weekly_assessments_section
                 )
 
-                status_message_box.write("🧠 Sending data to HealthAI AI...")
+                status_message_box.write("🧠 Analyzing your health patterns...")
 
                 # Generate analysis
                 analysis_data, _ = ai_client.generate_content(prompt)
