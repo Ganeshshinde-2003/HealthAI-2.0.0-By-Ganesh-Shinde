@@ -16,6 +16,9 @@ from .prompt_loader import (
     build_monthly_report_prompt
 )
 from .display import display_analysis_results, display_monthly_report
+from .storage import HealthAIStorage
+from .chat_agent import HealthChatAgent
+from .chat_ui import render_chat_interface
 
 __all__ = [
     'extract_text_from_file',
@@ -30,7 +33,10 @@ __all__ = [
     'build_supplements_prompt',
     'build_monthly_report_prompt',
     'display_analysis_results',
-    'display_monthly_report'
+    'display_monthly_report',
+    'HealthAIStorage',
+    'HealthChatAgent',
+    'render_chat_interface'
 ]
 
 __version__ = '1.0.0'

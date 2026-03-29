@@ -10,6 +10,7 @@ Author: Ganesh Shinde
 
 import streamlit as st
 import json
+from datetime import datetime
 
 # Import configuration
 from config import UIConfig, AIConfig
@@ -19,7 +20,9 @@ from utils import (
     extract_text_from_file,
     HealthAIClient,
     build_monthly_report_prompt,
-    display_monthly_report
+    display_monthly_report,
+    HealthAIStorage,
+    render_chat_interface
 )
 
 
@@ -35,7 +38,7 @@ st.set_page_config(
 
 
 # ==========================================
-# Initialize AI Client
+# Initialize AI Client & Storage
 # ==========================================
 
 try:
@@ -44,6 +47,10 @@ try:
 except Exception as e:
     st.error(f"Failed to initialize AI client: {e}")
     st.stop()
+
+# Initialize Storage (automatically loads from localStorage on first run)
+storage = HealthAIStorage()
+storage.initialize_storage()
 
 
 # ==========================================
@@ -55,6 +62,65 @@ def main():
 
     st.title(UIConfig.HEADER_MAIN_MONTHLY)
     st.write("Upload your monthly health tracking data for comprehensive trend analysis and personalized insights.")
+
+    # ====================
+    # Manual Load Button (if no data in session)
+    # ====================
+    if not storage.check_storage_exists():
+        st.info("💡 Have previous report data? Load it from your browser storage.", icon="ℹ️")
+
+        col1, col2, col3 = st.columns([1, 1, 1])
+        with col2:
+            if st.button("🔄 Load Previous Data", type="primary", use_container_width=True, key="manual_load_btn_monthly"):
+                # Trigger manual load
+                if storage.manual_load_from_storage():
+                    st.success("✅ Data loaded successfully!")
+                    st.rerun()
+                else:
+                    st.warning("No previous data found in browser storage.")
+
+        st.markdown("---")
+
+    # ====================
+    # Storage Info Banner
+    # ====================
+    if storage.check_storage_exists():
+        storage_info = storage.get_storage_info()
+        st.info(
+            f"💾 **{storage_info['total_analyses']} report(s) in memory** | "
+            f"Last saved: {storage_info['latest_analysis_date'][:10] if storage_info['latest_analysis_date'] else 'N/A'} | "
+            f"View below or export from sidebar →",
+            icon="ℹ️"
+        )
+
+    # ====================
+    # Previous Analysis Section (if exists)
+    # ====================
+    if storage.check_storage_exists():
+        latest_analysis = storage.get_latest_analysis("monthly")
+        if latest_analysis:
+            with st.expander("📂 Previous Monthly Report Found - Click to view", expanded=False):
+                timestamp = latest_analysis.get("timestamp", "Unknown date")
+                st.success(f"📅 Last report: {timestamp}")
+
+                if st.button("👁️ View Previous Report", use_container_width=True, key="view_prev_monthly_btn"):
+                    st.session_state.show_previous_monthly = True
+
+        st.markdown("---")
+
+        # Display previous results in full width (outside columns)
+        if st.session_state.get("show_previous_monthly", False):
+            st.markdown("---")
+            st.subheader("📊 Previously Saved Monthly Report")
+
+            # Close button
+            if st.button("✖️ Close Previous Report", key="close_prev_monthly_btn"):
+                st.session_state.show_previous_monthly = False
+                st.rerun()
+
+            display_monthly_report(latest_analysis["output_data"])
+            st.info("💡 Upload new files below to generate a fresh report.")
+            st.markdown("---")
 
     # ====================
     # Monthly Tracking Guide (Expandable)
@@ -124,6 +190,78 @@ def main():
     st.markdown("---")
 
     # ====================
+    # Sidebar: Data Management
+    # ====================
+    with st.sidebar:
+        st.markdown("### 💾 Data Management")
+
+        # Import data section
+        st.markdown("#### 📥 Import Data")
+        import_file = st.file_uploader(
+            "Upload previous export",
+            type=["json"],
+            key="import_data_uploader",
+            help="Import a previously exported HealthAI backup file"
+        )
+
+        if import_file is not None:
+            try:
+                import_data = json.load(import_file)
+                if storage.import_data(json.dumps(import_data)):
+                    st.success("✅ Data imported successfully!")
+                    st.rerun()
+                else:
+                    st.error("❌ Failed to import data")
+            except Exception as e:
+                st.error(f"❌ Error reading file: {e}")
+
+        st.markdown("---")
+
+        # Export data section
+        if storage.check_storage_exists():
+            storage_info = storage.get_storage_info()
+            st.markdown("#### 📤 Export Data")
+            st.info(f"📊 {storage_info['total_analyses']} stored analyses")
+
+            export_json = storage.export_all_data()
+            st.download_button(
+                label="⬇️ Download Backup",
+                data=export_json,
+                file_name=f"healthai_backup_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json",
+                mime="application/json",
+                use_container_width=True,
+                help="Download all your data as a JSON file"
+            )
+
+            st.markdown("---")
+
+            # Clear data with confirmation
+            if 'confirm_clear_monthly' not in st.session_state:
+                st.session_state.confirm_clear_monthly = False
+
+            if st.button("🗑️ Clear All Data", use_container_width=True, type="secondary", key="clear_all_monthly_btn"):
+                st.session_state.confirm_clear_monthly = True
+
+            if st.session_state.confirm_clear_monthly:
+                st.warning("⚠️ This will delete all stored reports!")
+                col_a, col_b = st.columns(2)
+                with col_a:
+                    if st.button("✅ Yes, Delete", use_container_width=True, type="primary", key="confirm_yes_monthly"):
+                        storage.clear_storage()
+                        st.session_state.confirm_clear_monthly = False
+                        st.success("✅ All data cleared!")
+                        st.rerun()
+                with col_b:
+                    if st.button("❌ Cancel", use_container_width=True, key="confirm_no_monthly"):
+                        st.session_state.confirm_clear_monthly = False
+                        st.rerun()
+        else:
+            st.info("💡 No stored data yet.\n\nComplete an analysis to save data automatically.")
+
+        st.markdown("---")
+        st.caption("💾 Data is stored in your browser\n🔄 Export to save permanently")
+
+    # ====================
     # File Upload Section
     # ====================
     previous_lab_report = st.file_uploader(
@@ -148,6 +286,9 @@ def main():
     raw_lab_report_text = extract_text_from_file(previous_lab_report) if previous_lab_report else ""
     raw_daily_logs_text = extract_text_from_file(daily_logs)
     raw_weekly_assessments_text = extract_text_from_file(weekly_assessments) if weekly_assessments else ""
+
+    # Render chat interface (always visible)
+    render_chat_interface()
 
     # ====================
     # Validation
@@ -211,6 +352,21 @@ def main():
                 # ====================
                 if analysis_data:
                     status_message_box.update(label=UIConfig.MONTHLY_COMPLETE, state="complete")
+
+                    # Save to localStorage
+                    status_message_box.write("💾 Saving report...")
+                    save_success = storage.save_analysis_result(
+                        input_data={
+                            "daily_logs": raw_daily_logs_text,
+                            "weekly_assessments": raw_weekly_assessments_text,
+                            "previous_lab_report": raw_lab_report_text
+                        },
+                        output_data=analysis_data,
+                        analysis_type="monthly"
+                    )
+
+                    if save_success:
+                        st.success("✅ Report saved! Your data persists in this browser session.", icon="💾")
 
                     # Beautiful visual display
                     display_monthly_report(analysis_data)

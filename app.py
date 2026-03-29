@@ -10,6 +10,7 @@ Author: Ganesh Shinde
 
 import streamlit as st
 import json
+from datetime import datetime
 
 # Import configuration
 from config import UIConfig, AppMetadata
@@ -23,7 +24,9 @@ from utils import (
     build_four_pillars_prompt,
     build_supplements_prompt,
     load_json_schema,
-    display_analysis_results
+    display_analysis_results,
+    HealthAIStorage,
+    render_chat_interface
 )
 
 
@@ -39,7 +42,7 @@ st.set_page_config(
 
 
 # ==========================================
-# Initialize AI Client
+# Initialize AI Client & Storage
 # ==========================================
 
 # Initialize HealthAI client (handles credentials automatically)
@@ -48,6 +51,10 @@ try:
 except Exception as e:
     st.error(f"Failed to initialize AI client: {e}")
     st.stop()
+
+# Initialize Storage (automatically loads from localStorage on first run)
+storage = HealthAIStorage()
+storage.initialize_storage()
 
 
 # ==========================================
@@ -69,6 +76,65 @@ def main():
     # Display header
     st.title(UIConfig.HEADER_MAIN_ANALYZER)
     st.write("Upload your health data for personalized AI-powered analysis.")
+
+    # ====================
+    # Manual Load Button (if no data in session)
+    # ====================
+    if not storage.check_storage_exists():
+        st.info("💡 Have previous analysis data? Load it from your browser storage.", icon="ℹ️")
+
+        col1, col2, col3 = st.columns([1, 1, 1])
+        with col2:
+            if st.button("🔄 Load Previous Data", type="primary", use_container_width=True, key="manual_load_btn"):
+                # Trigger manual load
+                if storage.manual_load_from_storage():
+                    st.success("✅ Data loaded successfully!")
+                    st.rerun()
+                else:
+                    st.warning("No previous data found in browser storage.")
+
+        st.markdown("---")
+
+    # ====================
+    # Storage Info Banner
+    # ====================
+    if storage.check_storage_exists():
+        storage_info = storage.get_storage_info()
+        st.info(
+            f"💾 **{storage_info['total_analyses']} analysis(es) in memory** | "
+            f"Last saved: {storage_info['latest_analysis_date'][:10] if storage_info['latest_analysis_date'] else 'N/A'} | "
+            f"View below or export from sidebar →",
+            icon="ℹ️"
+        )
+
+    # ====================
+    # Previous Analysis Section (if exists)
+    # ====================
+    if storage.check_storage_exists():
+        latest_analysis = storage.get_latest_analysis("standard")
+        if latest_analysis:
+            with st.expander("📂 Previous Analysis Found - Click to view", expanded=False):
+                timestamp = latest_analysis.get("timestamp", "Unknown date")
+                st.success(f"📅 Last analysis: {timestamp}")
+
+                if st.button("👁️ View Previous Results", use_container_width=True, key="view_prev_btn"):
+                    st.session_state.show_previous = True
+
+        st.markdown("---")
+
+        # Display previous results in full width (outside columns)
+        if st.session_state.get("show_previous", False):
+            st.markdown("---")
+            st.subheader("📊 Previously Saved Analysis")
+
+            # Close button
+            if st.button("✖️ Close Previous Results", key="close_prev_btn"):
+                st.session_state.show_previous = False
+                st.rerun()
+
+            display_analysis_results(latest_analysis["output_data"])
+            st.info("💡 Upload new files below to generate a fresh analysis.")
+            st.markdown("---")
 
     # ====================
     # Upload Guide & Examples (Expandable)
@@ -127,6 +193,78 @@ def main():
 
     st.markdown("---")
 
+    # ====================
+    # Sidebar: Data Management
+    # ====================
+    with st.sidebar:
+        st.markdown("### 💾 Data Management")
+
+        # Import data section
+        st.markdown("#### 📥 Import Data")
+        import_file = st.file_uploader(
+            "Upload previous export",
+            type=["json"],
+            key="import_data_uploader",
+            help="Import a previously exported HealthAI backup file"
+        )
+
+        if import_file is not None:
+            try:
+                import_data = json.load(import_file)
+                if storage.import_data(json.dumps(import_data)):
+                    st.success("✅ Data imported successfully!")
+                    st.rerun()
+                else:
+                    st.error("❌ Failed to import data")
+            except Exception as e:
+                st.error(f"❌ Error reading file: {e}")
+
+        st.markdown("---")
+
+        # Export data section
+        if storage.check_storage_exists():
+            storage_info = storage.get_storage_info()
+            st.markdown("#### 📤 Export Data")
+            st.info(f"📊 {storage_info['total_analyses']} stored analyses")
+
+            export_json = storage.export_all_data()
+            st.download_button(
+                label="⬇️ Download Backup",
+                data=export_json,
+                file_name=f"healthai_backup_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json",
+                mime="application/json",
+                use_container_width=True,
+                help="Download all your data as a JSON file"
+            )
+
+            st.markdown("---")
+
+            # Clear data with confirmation
+            if 'confirm_clear' not in st.session_state:
+                st.session_state.confirm_clear = False
+
+            if st.button("🗑️ Clear All Data", use_container_width=True, type="secondary", key="clear_all_btn"):
+                st.session_state.confirm_clear = True
+
+            if st.session_state.confirm_clear:
+                st.warning("⚠️ This will delete all stored analyses!")
+                col_a, col_b = st.columns(2)
+                with col_a:
+                    if st.button("✅ Yes, Delete", use_container_width=True, type="primary", key="confirm_yes"):
+                        storage.clear_storage()
+                        st.session_state.confirm_clear = False
+                        st.success("✅ All data cleared!")
+                        st.rerun()
+                with col_b:
+                    if st.button("❌ Cancel", use_container_width=True, key="confirm_no"):
+                        st.session_state.confirm_clear = False
+                        st.rerun()
+        else:
+            st.info("💡 No stored data yet.\n\nComplete an analysis to save data automatically.")
+
+        st.markdown("---")
+        st.caption("💾 Data is stored in your browser\n🔄 Export to save permanently")
+
     # File upload section
     col1, col2 = st.columns(2)
     with col1:
@@ -142,6 +280,9 @@ def main():
             type=[".pdf", ".docx", ".xlsx", ".xls", ".txt", ".csv"],
             help="Upload any health information like: symptoms you're experiencing, health goals, medical history, current medications, lifestyle habits, or concerns. This can be a document you created, doctor's notes, or any text file with your health information."
         )
+
+    # Render chat interface (always visible)
+    render_chat_interface()
 
     # Validation
     if not lab_report_files:
@@ -265,6 +406,20 @@ Here is the user's Lab Report text (potentially multiple reports combined):
             # ====================
             if any(final_combined_output.values()):
                 status_message_box.update(label=UIConfig.ANALYSIS_COMPLETE, state="complete")
+
+                # Save to localStorage
+                status_message_box.write("💾 Saving analysis...")
+                save_success = storage.save_analysis_result(
+                    input_data={
+                        "lab_reports": combined_lab_report_text,
+                        "health_assessment": raw_health_assessment_input
+                    },
+                    output_data=final_combined_output,
+                    analysis_type="standard"
+                )
+
+                if save_success:
+                    st.success("✅ Analysis saved! Your data persists in this browser session.", icon="💾")
 
                 # Beautiful visual display
                 display_analysis_results(final_combined_output)
