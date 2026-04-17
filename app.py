@@ -420,50 +420,52 @@ Here is the user's Lab Report text (potentially multiple reports combined):
 
                 if save_success:
                     st.success("✅ Analysis saved! Your data persists in this browser session.", icon="💾")
-
-                # Beautiful visual display
-                display_analysis_results(final_combined_output)
-
-                st.markdown("---")
-
-                # Download buttons
-                st.subheader("📥 Download Your Report")
-                col1, col2 = st.columns(2)
-
-                with col1:
-                    # JSON Download
-                    plain_json_string = json.dumps(final_combined_output, indent=2)
-                    st.download_button(
-                        label="📄 Download JSON",
-                        data=plain_json_string,
-                        file_name="healthai_analysis.json",
-                        mime="application/json",
-                        help="Download your analysis as a JSON file for your records or to use with other tools."
-                    )
-
-                with col2:
-                    # PDF Download (placeholder for now)
-                    st.button(
-                        "📑 Download PDF Report",
-                        disabled=True,
-                        help="PDF generation coming soon! For now, you can print this page as PDF using your browser (Ctrl/Cmd + P)."
-                    )
-
-                st.info("💡 **Tip**: Use your browser's Print function (Ctrl/Cmd + P) to save this page as PDF for now.", icon="ℹ️")
-
-                # Expandable JSON section for developers
-                with st.expander("🔍 View Raw JSON Data (for developers)", expanded=False):
-                    st.json(final_combined_output, expanded=True)
-                    st.markdown("**Copy JSON Text:**")
-                    st.text_area(
-                        "Select and copy:",
-                        plain_json_string,
-                        height=300,
-                        disabled=True,
-                        label_visibility="collapsed"
-                    )
             else:
                 status_message_box.error("❌ No analysis data could be generated. Please check the inputs and ensure HealthAI is correctly configured.")
+
+        # Display results outside status block to avoid nesting expanders
+        if final_combined_output:
+            # Beautiful visual display
+            display_analysis_results(final_combined_output)
+
+            st.markdown("---")
+
+            # Download buttons
+            st.subheader("📥 Download Your Report")
+            col1, col2 = st.columns(2)
+
+            with col1:
+                # JSON Download
+                plain_json_string = json.dumps(final_combined_output, indent=2)
+                st.download_button(
+                    label="📄 Download JSON",
+                    data=plain_json_string,
+                    file_name="healthai_analysis.json",
+                    mime="application/json",
+                    help="Download your analysis as a JSON file for your records or to use with other tools."
+                )
+
+            with col2:
+                # PDF Download (placeholder for now)
+                st.button(
+                    "📑 Download PDF Report",
+                    disabled=True,
+                    help="PDF generation coming soon! For now, you can print this page as PDF using your browser (Ctrl/Cmd + P)."
+                )
+
+            st.info("💡 **Tip**: Use your browser's Print function (Ctrl/Cmd + P) to save this page as PDF for now.", icon="ℹ️")
+
+            # Expandable JSON section for developers
+            with st.expander("🔍 View Raw JSON Data (for developers)", expanded=False):
+                st.json(final_combined_output, expanded=True)
+                st.markdown("**Copy JSON Text:**")
+                st.text_area(
+                    "Select and copy:",
+                    plain_json_string,
+                    height=300,
+                    disabled=True,
+                    label_visibility="collapsed"
+                )
 
 
 if __name__ == "__main__":

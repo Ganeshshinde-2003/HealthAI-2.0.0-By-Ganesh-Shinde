@@ -133,7 +133,8 @@ Suggest they upload their lab reports or health data to get personalized insight
             'analysis', 'report', 'result', 'score', 'recommendation',
             'sick', 'ill', 'disease', 'condition', 'chronic', 'acute',
             'food', 'meal', 'eat', 'hungry', 'weight', 'body', 'mental',
-            'anxiety', 'depression', 'headache', 'muscle', 'joint', 'bone'
+            'anxiety', 'depression', 'headache', 'muscle', 'joint', 'bone',
+            'hello', 'hi', 'hey', 'thanks', 'help', 'how', 'what', 'can', 'do', 'tell'
         ]
 
         message_lower = message.lower()
@@ -149,13 +150,6 @@ Suggest they upload their lab reports or health data to get personalized insight
         Returns:
             str: AI's response
         """
-        # Check if health-related
-        if not self.is_health_related(user_message):
-            return ("I'm HealthAI, specialized in health and medical questions. "
-                   "I can only help with health-related queries. Please ask me about "
-                   "your health data, biomarkers, supplements, lifestyle, or general health topics. "
-                   "For example: 'What do my biomarkers mean?' or 'How can I improve my sleep?'")
-
         # Add user message to history
         st.session_state.chat_history.append({
             "role": "user",
