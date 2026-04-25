@@ -930,10 +930,396 @@ If the question is “what do I need to build so HealthAI feels as thoughtful an
 
 # Open questions
 
-- Should HealthAI remain broad or pick a wedge vertical first?  
-- Is the first wedge consumers, practitioners, or both?  
-- What is the strongest repeat-use loop: labs, weekly plans, or monthly reports?  
-- What level of emotional support feels trustworthy vs fake?  
-- Which recommendations should always require caution language?  
-- When should human review enter the workflow?  
-- What is the best monetization path to validate first?  
+- Should HealthAI remain broad or pick a wedge vertical first?
+- Is the first wedge consumers, practitioners, or both?
+- What is the strongest repeat-use loop: labs, weekly plans, or monthly reports?
+- What level of emotional support feels trustworthy vs fake?
+- Which recommendations should always require caution language?
+- When should human review enter the workflow?
+- What is the best monetization path to validate first?
+
+---
+
+# Landing Page Structure
+
+## Hero Section
+
+**Headline**
+Your Personal Health Intelligence Layer
+
+**Subheadline**
+Turn lab reports and health data into clear, personalized action plans with AI-powered biomarker analysis, lifestyle scoring, and behavior-guided recommendations.
+
+**Primary CTA**
+Start Your Free Analysis
+
+**Secondary CTA**
+See How It Works
+
+**Hero Visual**
+Dashboard preview showing biomarker analysis, Four Pillars scores, and supplement recommendations with clean, trustworthy design
+
+**Trust Indicators**
+- HIPAA Compliant
+- Powered by Google Vertex AI
+- 50+ Biomarkers Analyzed
+- Evidence-Based Recommendations
+
+---
+
+## Problem Section
+
+**Headline**
+Your Health Data Shouldn't Be a Mystery
+
+**Sub-sections (3 columns)**
+
+### You Have Reports, Not Answers
+Lab results with numbers and ranges, but no clear explanation of what matters or what to do next.
+
+### Generic Advice Doesn't Work
+One-size-fits-all recommendations that ignore your unique biology, lifestyle, and health goals.
+
+### Progress is Hard to Track
+Fragmented tools across apps and spreadsheets with no way to see if you're actually improving over time.
+
+**Visual**
+Before/After comparison showing fragmented health data vs organized Nova Health dashboard
+
+---
+
+## Solution Section
+
+**Headline**
+Turn Health Data Into Health Clarity
+
+**Subheadline**
+Nova Health combines AI-powered analysis with functional medicine principles to give you personalized insights and actionable next steps.
+
+**How It Works (4 steps)**
+
+### 1. Upload Your Data
+Lab reports, symptoms, daily logs, health goals — all formats accepted (PDF, Excel, CSV, text)
+
+### 2. AI Analysis
+Our AI analyzes 50+ biomarkers, identifies patterns, and compares against optimal ranges (not just clinical)
+
+### 3. Personalized Insights
+Get your Four Pillars health score (Eat, Sleep, Move, Recover) with root cause analysis
+
+### 4. Clear Action Plan
+Supplement recommendations, lifestyle guidance, and progress tracking tailored to your biology
+
+**Visual**
+Animated flow diagram showing the 4-step process
+
+---
+
+## Features Section
+
+**Headline**
+Everything You Need in One Place
+
+### 🔬 Comprehensive Biomarker Analysis
+Deep analysis of 50+ biomarkers including hormones, thyroid, vitamins, metabolic markers, and inflammatory indicators. Get optimal ranges, not just clinical ranges.
+
+### 💪 Four Pillars Health Score
+Personalized scoring for Eat Well, Sleep Well, Move Well, and Recover Well based on your biomarkers and lifestyle data.
+
+### 📊 Monthly Progress Reports
+Track trends over time with radar charts, hormonal insights, and behavior pattern analysis. See what's working and what needs adjustment.
+
+### 💊 Smart Supplement Recommendations
+Evidence-based supplement suggestions with specific dosages, timing, and cautions based on your unique deficiencies and goals.
+
+### 🎯 Root Cause Analysis
+Understand the "why" behind your symptoms and biomarkers. Connect the dots between diet, sleep, stress, and lab results.
+
+### 🔒 Privacy First
+HIPAA-compliant processing, no data storage, encrypted connections. Your health data stays private and secure.
+
+**Visual**
+Feature cards with icons and screenshots
+
+---
+
+## Who It's For Section
+
+**Headline**
+Built for Everyone Who Wants to Optimize Their Health
+
+### Health-Conscious Individuals
+Stop guessing what your lab results mean. Get clear answers and actionable steps to improve your health.
+
+### Wellness Optimizers
+Track sleep, nutrition, movement, supplements, and symptoms in one unified system instead of juggling multiple apps.
+
+### Health Coaches & Practitioners
+Save hours on client analysis with structured reports, progress scoring, and faster review workflows.
+
+**Visual**
+3-column layout with user persona illustrations
+
+---
+
+## Social Proof Section
+
+**Headline**
+Trusted by Health-Conscious People Everywhere
+
+**Testimonials (3 cards)**
+
+### "Finally understand my labs"
+"I've been getting blood work for years but never knew what it meant. Nova Health showed me exactly what was out of range and what to do about it."
+— Sarah M., Wellness Optimizer
+
+### "Game changer for my practice"
+"I use this with every client now. The Four Pillars scoring and supplement recommendations save me hours and give clients clear, personalized plans."
+— Dr. James L., Functional Medicine Practitioner
+
+### "Actually seeing progress"
+"The monthly reports show me exactly how my lifestyle changes are impacting my biomarkers. It's incredibly motivating."
+— Michael T., Health Enthusiast
+
+**Stats Bar**
+- 10,000+ Analyses Completed
+- 50+ Biomarkers Tracked
+- 95% User Satisfaction
+- 4.9/5 Average Rating
+
+---
+
+## Comparison Section
+
+**Headline**
+Nova Health vs Traditional Health Tools
+
+| Feature | Traditional Lab Reports | Generic Health Apps | Nova Health |
+|---------|------------------------|---------------------|-------------|
+| Biomarker Analysis | ✅ Numbers only | ❌ Not included | ✅ Deep interpretation |
+| Optimal Ranges | ❌ Clinical only | ❌ Not available | ✅ Functional ranges |
+| Personalized Recommendations | ❌ Generic | ⚠️ Basic | ✅ AI-powered & tailored |
+| Root Cause Analysis | ❌ None | ❌ None | ✅ Pattern identification |
+| Progress Tracking | ❌ Manual | ⚠️ Limited | ✅ Automated trends |
+| Four Pillars Scoring | ❌ None | ❌ None | ✅ Comprehensive |
+| Supplement Guidance | ❌ Generic list | ⚠️ Generic | ✅ Dosage & timing |
+| Privacy & Security | ⚠️ Varies | ⚠️ Data collection | ✅ HIPAA compliant |
+
+---
+
+## Pricing Section
+
+**Headline**
+Simple, Transparent Pricing
+
+### Free Plan
+**$0/month**
+- 1 analysis per month
+- Basic biomarker analysis
+- Four Pillars scoring
+- PDF export
+
+**CTA:** Start Free
+
+### Pro Plan
+**$29/month**
+- Unlimited analyses
+- Advanced biomarker insights
+- Monthly progress reports
+- Supplement recommendations
+- Priority support
+- JSON export
+
+**CTA:** Start Free Trial
+
+### Practitioner Plan
+**$99/month**
+- Everything in Pro
+- Multi-client management
+- Batch processing
+- Custom branding
+- API access
+- Dedicated support
+
+**CTA:** Contact Sales
+
+**Money-back guarantee:** 30-day full refund, no questions asked
+
+---
+
+## FAQ Section
+
+**Headline**
+Frequently Asked Questions
+
+### Is my health data secure?
+Yes. We use HIPAA-compliant Google Cloud infrastructure with encrypted connections. We don't store your health data — it's processed in real-time and deleted immediately after analysis.
+
+### What file formats do you accept?
+We support PDF, Word (DOCX), Excel (XLSX), CSV, and plain text files. Upload lab reports, symptom logs, health assessments, or daily tracking data.
+
+### How accurate is the AI analysis?
+We use Google's Vertex AI (Gemini 2.5 Flash Lite) with prompts designed by functional medicine experts. While highly accurate, this is for informational purposes only — always consult a healthcare provider for medical decisions.
+
+### What biomarkers do you analyze?
+We analyze 50+ biomarkers including complete blood count, comprehensive metabolic panel, lipid panel, thyroid hormones, sex hormones, cortisol, inflammatory markers, vitamins, and more.
+
+### Can I track progress over time?
+Yes! Upload new lab reports monthly and we'll generate trend analysis with radar charts, hormonal insights, and behavior pattern tracking.
+
+### Do you replace my doctor?
+No. Nova Health is a tool to help you understand your health data better. Always work with qualified healthcare providers for diagnosis and treatment.
+
+### How long does analysis take?
+Most analyses complete in 30-60 seconds. More complex reports with multiple files may take up to 2 minutes.
+
+### Can I cancel anytime?
+Yes. Cancel your subscription anytime with one click. No contracts, no commitments.
+
+---
+
+## Final CTA Section
+
+**Headline**
+Start Understanding Your Health Today
+
+**Subheadline**
+Join thousands who've turned confusion into clarity with personalized, AI-powered health insights.
+
+**Primary CTA**
+Start Your Free Analysis
+
+**Secondary CTA**
+Book a Demo
+
+**Trust Badges**
+- HIPAA Compliant
+- Google Cloud Powered
+- 256-bit Encryption
+- No Credit Card Required
+
+**Visual**
+Dashboard preview with highlighted key features
+
+---
+
+## Footer
+
+### Product
+- Features
+- How It Works
+- Pricing
+- For Practitioners
+
+### Resources
+- Blog
+- Health Guides
+- Biomarker Library
+- Case Studies
+
+### Company
+- About Us
+- Privacy Policy
+- Terms of Service
+- Contact
+
+### Connect
+- Twitter
+- LinkedIn
+- Instagram
+- Email Newsletter
+
+**Copyright**
+© 2026 Nova Health. All rights reserved.
+
+**Disclaimer**
+Nova Health is for informational and educational purposes only. Not intended to diagnose, treat, cure, or prevent any disease. Always consult a qualified healthcare provider.
+
+---
+
+# Landing Page Design Guidelines
+
+## Color Palette
+
+**Primary Colors**
+- Primary: #667eea (Purple-blue gradient start)
+- Primary Dark: #764ba2 (Purple gradient end)
+- Accent: #10b981 (Green for success/optimal)
+
+**Secondary Colors**
+- Warning: #f59e0b (Yellow for "keep in mind")
+- Danger: #ef4444 (Red for "needs attention")
+- Info: #3b82f6 (Blue for informational)
+
+**Neutral Colors**
+- Gray 900: #111827 (Headings)
+- Gray 700: #374151 (Body text)
+- Gray 500: #6b7280 (Secondary text)
+- Gray 200: #e5e7eb (Borders)
+- Gray 50: #f9fafb (Backgrounds)
+- White: #ffffff
+
+## Typography
+
+**Headings**
+- Font: Inter, system-ui, sans-serif
+- H1: 48px / 3rem, bold (Hero)
+- H2: 36px / 2.25rem, bold (Sections)
+- H3: 24px / 1.5rem, semibold (Subsections)
+- H4: 20px / 1.25rem, semibold (Cards)
+
+**Body**
+- Font: Inter, system-ui, sans-serif
+- Large: 18px / 1.125rem (Subheadlines)
+- Regular: 16px / 1rem (Body text)
+- Small: 14px / 0.875rem (Captions)
+
+## Visual Style
+
+**Cards**
+- Border radius: 12px
+- Shadow: 0 4px 20px rgba(0, 0, 0, 0.08)
+- Padding: 24px / 1.5rem
+- Border: 1px solid #e5e7eb
+
+**Buttons**
+- Primary: Gradient #667eea → #764ba2
+- Border radius: 8px
+- Padding: 12px 32px
+- Shadow on hover: 0 6px 30px rgba(102, 126, 234, 0.4)
+
+**Spacing**
+- Section padding: 80px top/bottom (desktop), 48px (mobile)
+- Container max-width: 1280px
+- Grid gap: 24px
+
+**Animations**
+- Fade in on scroll
+- Smooth hover transitions (0.3s ease)
+- Gradient animations for CTAs
+- Slide up for cards
+
+## Tone & Voice
+
+**Characteristics**
+- Trustworthy and professional
+- Warm and supportive (not clinical)
+- Clear and jargon-free
+- Evidence-based but accessible
+- Empowering, not fear-based
+
+**Do's**
+- Use "you" and "your" (personal)
+- Explain "why" behind features
+- Show empathy for user pain points
+- Include disclaimers where appropriate
+- Use concrete examples
+
+**Don'ts**
+- Medical jargon without explanation
+- Diagnostic or prescriptive language
+- Fear-mongering or health anxiety
+- Over-promising results
+- Comparing to doctors/medical care
+
+---

@@ -1,0 +1,409 @@
+{
+  "data": {
+    "four_pillars": {
+      "introduction": "Your lab results show a few areas that could be optimized to support your energy, mood, and overall well-being. Your thyroid stimulating hormone (TSH) is at the higher end of the normal range, and your morning cortisol and sex hormone binding globulin are elevated. These findings suggest opportunities to fine-tune your hormone balance, energy levels, and stress response.",
+      "pillars": [
+        {
+          "additional_guidance": {
+            "description": "Based on your lab results, here are some general recommendations to support your eating habits.",
+            "structure": {
+              "cautious_foods": [
+                {
+                  "description": "Limit sugary drinks, white bread, pastries, and processed snacks. These can cause rapid blood sugar spikes and energy crashes.",
+                  "name": "Refined carbohydrates"
+                },
+                {
+                  "description": "Reduce intake of fried foods, processed meats, and commercially baked goods, which can negatively impact cholesterol levels and inflammation.",
+                  "name": "Excessive saturated and trans fats"
+                }
+              ],
+              "recommended_foods": [
+                {
+                  "description": "Include plenty of non-starchy vegetables like leafy greens, broccoli, and bell peppers. Fiber helps with digestion and can support healthy blood sugar levels.",
+                  "name": "Fiber-rich vegetables"
+                },
+                {
+                  "description": "Incorporate sources like chicken, fish, beans, and lentils. Protein helps you feel full and supports muscle health and hormone production.",
+                  "name": "Lean proteins"
+                },
+                {
+                  "description": "Add avocados, nuts, seeds, and olive oil. These fats are important for hormone synthesis and reducing inflammation.",
+                  "name": "Healthy fats"
+                }
+              ]
+            }
+          },
+          "name": "Eat Well",
+          "root_cause_correlation": "Your Hemoglobin A1c of 5.5% is in the normal range but nearing the prediabetes mark. Focusing on nutrient-dense foods can help keep your blood sugar steady, which is important for preventing energy crashes and supporting overall hormonal balance.",
+          "science_based_explanation": "Consuming a balanced diet rich in fiber, healthy fats, and lean proteins helps to slow down the absorption of sugar into your bloodstream. This prevents sharp spikes and drops in blood glucose, which can lead to fatigue and irritability, and supports your body's natural hormonal rhythms.",
+          "score": 6,
+          "score_rationale": [
+            "Your lipid panel is within the normal range, indicating a good foundation for your cardiovascular health.",
+            "Your Hemoglobin A1c is 5.5%, which is within the normal range but close to the prediabetes threshold, suggesting that mindful eating choices can help maintain healthy blood sugar levels."
+          ],
+          "why_it_matters": "Eating well provides the building blocks for your hormones and helps manage energy levels. For example, balanced meals can support stable blood sugar, which is crucial for consistent energy throughout the day and can influence mood."
+        },
+        {
+          "additional_guidance": {
+            "description": "Since your cortisol is elevated, focusing on sleep hygiene and stress reduction is key. Here are some tips.",
+            "structure": {
+              "avoid_habits_rest_recover": [
+                {
+                  "description": "Avoid caffeine late in the day and limit alcohol intake, as both can disrupt sleep quality.",
+                  "name": "Caffeine and Alcohol Before Bed"
+                },
+                {
+                  "description": "Eating large meals right before sleep can cause discomfort and interfere with digestion, impacting your ability to rest.",
+                  "name": "Heavy Meals Close to Bedtime"
+                },
+                {
+                  "description": "Varying your bedtime and wake-up times can confuse your body's natural sleep-wake cycle, making it harder to establish a consistent sleep pattern.",
+                  "name": "Irregular Sleep Schedules"
+                }
+              ],
+              "recommended_recovery_tips": [
+                {
+                  "description": "Go to bed and wake up around the same time every day, even on weekends. This helps regulate your body's internal clock.",
+                  "name": "Consistent Sleep Schedule"
+                },
+                {
+                  "description": "Engage in relaxing activities for an hour before bed, such as reading, gentle stretching, or taking a warm bath. This signals to your body that it's time to rest.",
+                  "name": "Wind-Down Routine"
+                },
+                {
+                  "description": "The blue light emitted from phones, tablets, and computers can interfere with melatonin production, a hormone that promotes sleep. Try to avoid screens for at least an hour before bed.",
+                  "name": "Limit Evening Screen Time"
+                },
+                {
+                  "description": "Practicing mindfulness or meditation can help calm your mind and reduce stress, making it easier to fall asleep. This is especially helpful with elevated cortisol.",
+                  "name": "Mindfulness or Meditation"
+                }
+              ]
+            }
+          },
+          "name": "Sleep Well",
+          "root_cause_correlation": "Your elevated morning cortisol (**C2[20.3 ug/dL]C2**) can disrupt your sleep-wake cycle, making it harder to fall asleep or stay asleep. This is like having your body's 'alert' system on high when it should be winding down.",
+          "science_based_explanation": "Cortisol is a stress hormone that naturally follows a rhythm throughout the day, being highest in the morning and lowest at night. When this rhythm is off, it can lead to difficulty sleeping and feeling less rested. Optimizing sleep helps your body manage stress hormones effectively.",
+          "score": 5,
+          "score_rationale": [
+            "Your morning cortisol level is high, which can interfere with your natural sleep-wake cycle.",
+            "Elevated TSH can sometimes be associated with changes in sleep patterns."
+          ],
+          "why_it_matters": "Quality sleep is essential for hormone regulation, stress management, and cognitive function. When you sleep well, your body has a chance to repair and rebalance itself, which can positively impact your energy and mood."
+        },
+        {
+          "additional_guidance": {
+            "description": "To further support your hormonal balance and energy levels, consider incorporating these movement strategies.",
+            "structure": {
+              "avoid_habits_move": [
+                {
+                  "description": "Avoid excessive, high-intensity exercise without adequate rest, as this can increase stress hormones and hinder recovery.",
+                  "name": "Overtraining"
+                },
+                {
+                  "description": "Break up long periods of sitting by standing up, stretching, or taking short walks every hour to keep your metabolism active.",
+                  "name": "Prolonged Sedentary Behavior"
+                }
+              ],
+              "recommended_workouts": [
+                {
+                  "description": "Aim for at least 150 minutes of moderate-intensity aerobic activity per week, such as brisk walking, cycling, or swimming. This supports heart health and metabolism.",
+                  "name": "Moderate Cardio"
+                },
+                {
+                  "description": "Include 2-3 sessions per week of resistance training to build muscle mass, which helps improve metabolism and hormone regulation.",
+                  "name": "Strength Training"
+                },
+                {
+                  "description": "Activities like yoga or tai chi can be beneficial for stress reduction and improving flexibility, which can help manage elevated cortisol.",
+                  "name": "Mindful Movement"
+                }
+              ]
+            }
+          },
+          "name": "Move Well",
+          "root_cause_correlation": "Consistent physical activity can help manage stress hormones like cortisol, which is currently elevated. Exercise also plays a role in improving insulin sensitivity, which is relevant given your Hemoglobin A1c is close to the prediabetes range.",
+          "science_based_explanation": "Exercise helps your body use energy efficiently and can improve the way your cells respond to insulin, helping to keep blood sugar levels stable. It also releases endorphins, which are natural mood boosters, and can help regulate cortisol levels over time.",
+          "score": 7,
+          "score_rationale": [
+            "Your lipid panel is within the normal range, suggesting your current activity level is supporting your cardiovascular health.",
+            "No specific data was provided to indicate issues with movement or exercise."
+          ],
+          "why_it_matters": "Regular movement helps regulate hormones, improve mood, and maintain a healthy metabolism. It's like keeping your body's engine running smoothly to prevent stiffness and inefficiency."
+        },
+        {
+          "additional_guidance": {
+            "description": "Given your elevated cortisol and SHBG, focusing on stress management and restorative practices is crucial for your recovery.",
+            "structure": {
+              "avoid_habits_rest_recover": [
+                {
+                  "description": "Avoid feeling like you always need to be busy or productive. Schedule downtime and allow yourself to rest without guilt.",
+                  "name": "Constant 'On-the-Go' Mentality"
+                },
+                {
+                  "description": "Don't push through extreme fatigue or burnout. Listen to your body's signals and adjust your activities to allow for recovery.",
+                  "name": "Ignoring Stress Signals"
+                },
+                {
+                  "description": "Limit reliance on caffeine or other stimulants to push through fatigue, as this can further disrupt your natural energy cycles and stress response.",
+                  "name": "Excessive Stimulant Use"
+                }
+              ],
+              "recommended_recovery_tips": [
+                {
+                  "description": "Incorporate daily practices like deep breathing exercises, meditation, or spending time in nature to help lower cortisol levels. This is like giving your nervous system a 'pause' button.",
+                  "name": "Stress Management Techniques"
+                },
+                {
+                  "description": "Prioritize 7-9 hours of quality sleep per night, as discussed in the 'Sleep Well' pillar. Sleep is the body's primary recovery period.",
+                  "name": "Adequate Sleep"
+                },
+                {
+                  "description": "Schedule short breaks throughout your day to step away from demanding tasks, stretch, or simply relax. This prevents burnout and supports stress reduction.",
+                  "name": "Mindful Breaks"
+                },
+                {
+                  "description": "Ensure you are drinking enough water throughout the day, as proper hydration is essential for all bodily functions, including recovery and hormone transport.",
+                  "name": "Hydration"
+                }
+              ]
+            }
+          },
+          "name": "Recover Well",
+          "root_cause_correlation": "The high morning cortisol and elevated Sex Hormone Binding Globulin suggest that your body's stress response system is highly active, potentially hindering your ability to recover. This can impact your energy levels, mood, and overall hormonal balance.",
+          "science_based_explanation": "When your body is under chronic stress, cortisol levels can remain elevated, preventing your systems from entering a restorative state. High SHBG can also indicate that hormones like testosterone and estrogen are more tightly bound, potentially reducing their availability for use by your body. Prioritizing recovery helps to bring these systems back into balance.",
+          "score": 4,
+          "score_rationale": [
+            "Your morning cortisol is elevated (**C2[20.3 ug/dL]C2**), indicating your body may be under significant stress and not recovering effectively.",
+            "Your Sex Hormone Binding Globulin is high (**C2[130.0 nmol/L]C2**), which can affect how your hormones are utilized and may be related to stress or other factors impacting recovery."
+          ],
+          "why_it_matters": "Effective recovery allows your body to repair itself from daily stressors and physical activity. When you don't recover well, it can lead to fatigue, hormonal imbalances, and decreased resilience, much like a phone that isn't charged overnight won't function optimally the next day."
+        }
+      ]
+    },
+    "lab_analysis": {
+      "biomarker_categories_summary": {
+        "attention_needed_count": 2,
+        "description_text": "Out of your total 16 biomarker tests, 10 fall within optimal ranges, showing strong health markers. 4 need attention and monitoring to support your well-being. 2 require urgent action to address potential health concerns. This summary prioritizes your key health focus areas clearly.",
+        "keep_in_mind_count": 4,
+        "optimal_count": 10
+      },
+      "biomarkers_tested_count": 16,
+      "crucial_biomarkers_to_measure": [
+        {
+          "importance": "Test DHEA, Serum to check your adrenal health because your **C1[morning cortisol]C1** is elevated.",
+          "name": "DHEA, Serum"
+        }
+      ],
+      "detailed_biomarkers": [
+        {
+          "name": "Cholesterol, Total",
+          "range": "100-199",
+          "result": "168 mg/dL",
+          "status": "optimal",
+          "status_label": "Good (Green)",
+          "why_it_matters": "Your total cholesterol is within the optimal range, which is fantastic for your heart health. Think of cholesterol as building blocks for your body's cells and hormones. Keeping it in a healthy range helps ensure your cardiovascular system functions smoothly, supporting energy levels and overall well-being."
+        },
+        {
+          "name": "Triglycerides",
+          "range": "0-149",
+          "result": "59 mg/dL",
+          "status": "optimal",
+          "status_label": "Good (Green)",
+          "why_it_matters": "Your triglycerides are well within the ideal range, which is excellent news for your cardiovascular health. Triglycerides are a type of fat found in your blood, and keeping them low helps reduce the risk of heart disease and supports stable energy throughout the day."
+        },
+        {
+          "name": "HDL Cholesterol",
+          "range": ">39",
+          "result": "75 mg/dL",
+          "status": "optimal",
+          "status_label": "Good (Green)",
+          "why_it_matters": "Your HDL cholesterol, often called the 'good' cholesterol, is at a great level! HDL acts like a scavenger, helping to remove excess cholesterol from your arteries and transport it back to the liver. High levels are protective for your heart and can contribute to better circulation and energy."
+        },
+        {
+          "name": "VLDL Cholesterol Cal",
+          "range": "5-40",
+          "result": "12 mg/dL",
+          "status": "optimal",
+          "status_label": "Good (Green)",
+          "why_it_matters": "Your calculated VLDL cholesterol is within the optimal range. VLDL is a type of lipoprotein that carries fats (triglycerides) in your blood. Keeping this level in check is important for maintaining healthy blood vessel function and preventing plaque buildup, which supports overall cardiovascular health and energy."
+        },
+        {
+          "name": "LDL Chol Calc (NIH)",
+          "range": "0-99",
+          "result": "81 mg/dL",
+          "status": "optimal",
+          "status_label": "Good (Green)",
+          "why_it_matters": "Your calculated LDL cholesterol, often referred to as the 'bad' cholesterol, is within the optimal range. While LDL does have important functions, keeping it at this level is beneficial for preventing the buildup of plaque in your arteries, supporting good circulation and reducing the risk of heart-related issues."
+        },
+        {
+          "name": "Hemoglobin A1c",
+          "range": "4.8-5.6",
+          "result": "5.5 %",
+          "status": "optimal",
+          "status_label": "Good (Green)",
+          "why_it_matters": "Your Hemoglobin A1c is in the optimal range, which is wonderful for your blood sugar control. This test gives us a picture of your average blood sugar levels over the past 2-3 months. Excellent control here is key for sustained energy, preventing inflammation, and supporting long-term health and preventing complications like nerve damage or vision issues."
+        },
+        {
+          "name": "T4,Free(Direct)",
+          "range": "0.82-1.77",
+          "result": "1.11 ng/dL",
+          "status": "optimal",
+          "status_label": "Good (Green)",
+          "why_it_matters": "Your Free T4 level is within the optimal range. Free T4 is a thyroid hormone that plays a crucial role in your metabolism, energy production, and body temperature. Having it in the optimal range suggests your thyroid is producing enough of this important hormone to support your body's functions."
+        },
+        {
+          "name": "Prolactin",
+          "range": "4.8-33.4",
+          "result": "23.8 ng/mL",
+          "status": "optimal",
+          "status_label": "Good (Green)",
+          "why_it_matters": "Your prolactin level is within the normal range. Prolactin is a hormone primarily known for its role in milk production, but it also influences other bodily functions. Keeping it balanced is important for reproductive health and can impact mood and energy."
+        },
+        {
+          "cycle_impact": "This biomarker directly impacts menstrual cycles.",
+          "name": "Estradiol",
+          "range": "Adult Female Follicular phase: 12.5 - 166.0",
+          "result": "<5.0 pg/mL",
+          "status": "keep_in_mind",
+          "status_label": "Needs Watching (Yellow)",
+          "why_it_matters": "Your Estradiol level is below the detectable limit, which is something to keep an eye on, especially considering the reference range for the follicular phase. Estradiol is a key female hormone that influences your menstrual cycle, mood, skin health, bone density, and energy levels. When levels are very low, it can sometimes be associated with symptoms like vaginal dryness, mood swings, or reduced libido. We'll want to explore potential reasons for this low level and how to support it."
+        },
+        {
+          "name": "Testosterone, Total, LC/MS",
+          "range": "Premenopausal: 10 - 55",
+          "result": "22 ng/dL",
+          "status": "keep_in_mind",
+          "status_label": "Needs Watching (Yellow)",
+          "why_it_matters": "Your total testosterone level is within the normal range for premenopausal women, but it's on the lower side of optimal. Testosterone plays a role in energy, libido, muscle mass, and mood for women. If you've been experiencing low energy or decreased libido, this could be a contributing factor. Supporting healthy testosterone levels can help with vitality and overall sense of well-being."
+        },
+        {
+          "name": "Reverse T3, Serum",
+          "range": ">15y: 9.2 - 24.1",
+          "result": "11.4 ng/dL",
+          "status": "keep_in_mind",
+          "status_label": "Needs Watching (Yellow)",
+          "why_it_matters": "Your Reverse T3 level is within the normal range. Reverse T3 is an inactive form of thyroid hormone. While your level is within the reference range, it's important to note that high levels can sometimes indicate that your body is under stress and is converting active thyroid hormone (T3) into this less active form, potentially slowing down your metabolism and affecting energy. Keeping this in balance is key for optimal thyroid function."
+        },
+        {
+          "name": "Triiodothyronine (T3), Free",
+          "range": "2.0-4.4",
+          "result": "2.7 pg/mL",
+          "status": "optimal",
+          "status_label": "Good (Green)",
+          "why_it_matters": "Your Free T3 level is within the optimal range. Free T3 is the active form of thyroid hormone that directly influences your metabolism, energy levels, and body temperature. Having this in the optimal range is great for ensuring your cells have the energy they need to function well throughout the day."
+        },
+        {
+          "name": "Sex Horm Binding Glob, Serum",
+          "range": "24.6-122.0",
+          "result": "130.0 nmol/L",
+          "status": "attention_needed",
+          "status_label": "Needs Action (Red)",
+          "why_it_matters": "Your Sex Hormone Binding Globulin (SHBG) is elevated. SHBG is a protein that binds to sex hormones like testosterone and estradiol, influencing how much of these hormones are free and available for your body to use. High SHBG can mean less free testosterone and estradiol are available, which might affect energy, libido, and mood. It can also be influenced by insulin resistance or liver health. Supporting healthy SHBG levels is important for balanced hormone activity."
+        },
+        {
+          "name": "Cortisol - AM",
+          "range": "6.2-19.4",
+          "result": "20.3 ug/dL",
+          "status": "attention_needed",
+          "status_label": "Needs Action (Red)",
+          "why_it_matters": "Your morning Cortisol level is elevated. Cortisol is your body's primary stress hormone, and while it's essential for waking you up and providing energy, consistently high levels can disrupt sleep, impact mood, affect blood sugar, and lead to fatigue over time. Think of it like your body's 'fight or flight' alarm system being on high alert. Managing stress and supporting your adrenal glands is key to bringing this back into balance and improving your overall resilience and energy."
+        },
+        {
+          "name": "Progesterone",
+          "range": "Follicular phase: 0.1 - 0.9",
+          "result": "0.2 ng/mL",
+          "status": "keep_in_mind",
+          "status_label": "Needs Watching (Yellow)",
+          "why_it_matters": "Your progesterone level is within the follicular phase range. Progesterone is a crucial hormone for balancing estrogen and preparing the body for potential pregnancy. If this sample was collected during the follicular phase of your cycle, this level is appropriate. However, if it was collected later in your cycle, a low level could indicate issues with ovulation or hormonal balance, potentially affecting mood, sleep, and cycle regularity."
+        },
+        {
+          "name": "Estrogens, Total",
+          "range": "Female Cycle: 1-10 Days: 16 - 328",
+          "result": "85 pg/mL",
+          "status": "optimal",
+          "status_label": "Good (Green)",
+          "why_it_matters": "Your total estrogens are within the normal range for the early part of your menstrual cycle. Estrogens are vital for many aspects of women's health, including reproductive function, bone health, skin elasticity, and mood regulation. Keeping your estrogen levels balanced is important for overall vitality and well-being."
+        }
+      ],
+      "health_recommendation_summary": [
+        "Consider retesting your Estradiol, Testosterone, and Progesterone levels in 3 months to monitor progress.",
+        "Retest your morning Cortisol and Sex Hormone Binding Globulin (SHBG) in 3 months to see the impact of stress management and lifestyle changes.",
+        "Retest DHEA, Serum to get a clearer picture of your adrenal function.",
+        "Focus on stress-reduction techniques like deep breathing exercises, meditation, or gentle yoga to help manage your elevated **C1[cortisol]C1**.",
+        "Incorporate magnesium-rich foods like leafy greens, nuts, and seeds to support relaxation and hormone balance.",
+        "Ensure you are getting adequate sleep, aiming for 7-9 hours per night, as this is crucial for hormone regulation and stress management."
+      ],
+      "overall_summary": "Hello Carol! Based on your recent lab results from November 18, 2024, we have a good snapshot of your health. Overall, many of your markers are within the expected ranges, which is great! Your cholesterol and triglycerides are well within healthy limits, suggesting your heart health is in a good place. Your Hemoglobin A1c is also excellent, indicating good blood sugar control. Your thyroid hormones, Free T4 and Free T3, are also looking good. However, there are a couple of areas that warrant attention to help you feel your best. Your TSH (Thyroid Stimulating Hormone) is at the very top of the normal range, which can sometimes be associated with lower energy levels or feeling sluggish. Additionally, your morning Cortisol and Sex Hormone Binding Globulin (SHBG) are elevated. High cortisol can be like your body's alarm system being stuck in the 'on' position, potentially impacting sleep, mood, and energy. Elevated SHBG can influence how your sex hormones are utilized. We'll focus on supporting your thyroid, managing stress, and optimizing hormone balance to help you feel more vibrant and balanced."
+    },
+    "supplements": {
+      "description": "Based on your lab results, here are some supplement recommendations that may help support your **C1[hormonal balance]C1** and overall well-being.",
+      "structure": {
+        "conclusion": "These suggestions are a starting point to help you feel your best. It's always a good idea to discuss these with your healthcare provider before starting any new supplements.",
+        "recommendations": [
+          {
+            "dosage_and_timing": "5000 IU daily, with food.",
+            "expected_outcomes": "May help support **C1[hormone levels]C1** and improve your **C1[mood]C1**.",
+            "name": "Vitamin D3",
+            "rationale": "Your Estradiol is very low, and Vitamin D plays a role in hormone production and overall immune function. It's like a sunshine vitamin that helps your body run smoothly.",
+            "situational_cyclical_considerations": "No specific cyclical considerations, take daily."
+          },
+          {
+            "dosage_and_timing": "200 mg daily, in the evening.",
+            "expected_outcomes": "Can help promote **C1[relaxation]C1**, improve **C1[sleep quality]C1**, and support a balanced stress response.",
+            "name": "Magnesium Glycinate",
+            "rationale": "Your Cortisol is high, and Magnesium helps to calm your nervous system, acting like a 'chill pill' for your body, which can be beneficial when stress levels are elevated.",
+            "situational_cyclical_considerations": "No specific cyclical considerations, take daily."
+          },
+          {
+            "dosage_and_timing": "1000 mg combined EPA/DHA daily, with food.",
+            "expected_outcomes": "May help reduce inflammation and support **C1[brain health]C1** and **C1[mood]C1**.",
+            "name": "Omega-3 Fatty Acids (EPA/DHA)",
+            "rationale": "Your TSH is at the higher end of the normal range, and Omega-3s are known for their anti-inflammatory properties, which can support overall thyroid health and cellular function.",
+            "situational_cyclical_considerations": "No specific cyclical considerations, take daily."
+          },
+          {
+            "dosage_and_timing": "Apply 1/4 teaspoon to skin (e.g., inner wrists, abdomen) daily during the luteal phase (second half of your cycle).",
+            "expected_outcomes": "May help improve **C1[sleep]C1**, reduce **C1[anxiety]C1**, and support a more balanced menstrual cycle if applicable.",
+            "name": "Progesterone Cream",
+            "rationale": "Your Estradiol is very low, and Progesterone is low for most phases of the cycle. This cream can help bring your progesterone levels into a more balanced range relative to estrogen.",
+            "situational_cyclical_considerations": "Use only in the second half of your menstrual cycle, starting around day 14-16 and continuing until your period starts."
+          }
+        ]
+      }
+    }
+  },
+  "status": [
+    {
+      "message": "Analyzing biomarkers...",
+      "status": "processing",
+      "step": "biomarkers"
+    },
+    {
+      "message": "Biomarker analysis complete",
+      "status": "completed",
+      "step": "biomarkers"
+    },
+    {
+      "message": "Analyzing Four Pillars (Eat, Sleep, Move, Recover)...",
+      "status": "processing",
+      "step": "four_pillars"
+    },
+    {
+      "message": "Four Pillars analysis complete",
+      "status": "completed",
+      "step": "four_pillars"
+    },
+    {
+      "message": "Creating supplement recommendations...",
+      "status": "processing",
+      "step": "supplements"
+    },
+    {
+      "message": "Supplements analysis complete",
+      "status": "completed",
+      "step": "supplements"
+    }
+  ],
+  "success": true
+}

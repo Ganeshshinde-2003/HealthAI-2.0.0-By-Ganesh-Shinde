@@ -1,0 +1,90 @@
+{
+  "monthly_overview_summary": {
+    "summary": "string",
+    "top_symptoms": "array of strings",
+    "health_reflection": "string"
+  },
+  "hormonal_balance_insight": {
+    "score_or_message": "string",
+    "tied_to_logs": "array of strings",
+    "likely_root_causes": "array of strings"
+  },
+  "logged_patterns": {
+    "eat_well": {
+      "did_well": "array of strings",
+      "areas_to_improve": "array of strings",
+      "recommendations": "array of strings",
+      "Guidance": "array of strings",
+      "metrics": {
+        "days_logged": "number",
+        "average_meal_satisfaction_score": "number",
+        "processed_food_days_percentage": "number"
+      }
+    },
+    "sleep_well": {
+      "did_well": "array of strings",
+      "areas_to_improve": "array of strings",
+      "recommendations": "array of strings",
+      "Guidance": "array of strings",
+      "metrics": {
+        "days_logged": "number",
+        "average_sleep_quality_score": "number",
+        "average_sleep_hours": "number",
+        "consistent_bedtime_percentage": "number"
+      }
+    },
+    "move_well": {
+      "did_well": "array of strings",
+      "areas_to_improve": "array of strings",
+      "recommendations": "array of strings",
+      "Guidance": "array of strings",
+      "metrics": {
+        "days_logged": "number",
+        "activity_days_percentage": "number",
+        "average_activity_intensity_score": "number"
+      }
+    },
+    "recover_well": {
+      "did_well": "array of strings",
+      "areas_to_improve": "array of strings",
+      "recommendations": "array of strings",
+      "Guidance": "array of strings",
+      "metrics": {
+        "days_logged": "number",
+        "average_stress_level_score": "number",
+        "recovery_activity_days_percentage": "number"
+      }
+    }
+  },
+  "root_cause_tags": [
+    {
+      "tag": "string",
+      "explanation": "string"
+    }
+  ],
+  "actionable_next_steps": {
+    "food_to_enjoy": "array of strings",
+    "food_to_limit": "array of strings",
+    "rest_and_recovery": "array of strings",
+    "daily_habits": "array of strings",
+    "movements": "array of strings",
+    "behavior_goals": "array of strings",
+    "encouragement_message": "string"
+  },
+  "radar_chart_data": {
+    "scores": {
+      "eat_well": "number",
+      "sleep_well": "number",
+      "move_well": "number",
+      "recover_well": "number"
+    },
+    "key_behaviors": {
+      "eat_well": "array of strings",
+      "sleep_well": "array of strings",
+      "move_well": "array of strings",
+      "recover_well": "array of strings"
+    },
+    "label": "string",
+    "caption": "string"
+  }
+}

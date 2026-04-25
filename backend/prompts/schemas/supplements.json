@@ -1,0 +1,17 @@
+{
+  "supplements": {
+    "description": "string - Explains supplement advice in simple terms based on your lab or health data (e.g., 'These supplements may help with your **C1[tiredness]C1**').",
+    "structure": {
+      "recommendations": [
+        {
+          "name": "string - Supplement name (e.g., 'Magnesium').",
+          "rationale": "string - Simple reason linked to your data (e.g., 'For your low Estradiol and **C1[mood swings]C1**, helps calm your body').",
+          "expected_outcomes": "string - Simple benefits (e.g., 'Better **C1[sleep]C1**, like a restful night').",
+          "dosage_and_timing": "string - Simple dosage (e.g., '200 mg daily, evening').",
+          "situational_cyclical_considerations": "string - Simple cycle-specific advice (e.g., 'Use in the second half of your cycle for **C1[cramps]C1**')."
+        }
+      ],
+      "conclusion": "string - Encourages you to stick to the advice and check with your doctor, in simple terms."
+    }
+  }
+}
