@@ -47,8 +47,8 @@ uploads/
 *.docx
 *.xlsx
 *.xls
-*.txt
 *.csv
+# Note: *.txt removed to allow requirements.txt
 
 # IDE
 .vscode/
