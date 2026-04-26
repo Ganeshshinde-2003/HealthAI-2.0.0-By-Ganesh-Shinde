@@ -220,7 +220,7 @@ export function AnalysisResults({ data, onNewAnalysis }: AnalysisResultsProps) {
                         Action Items:
                       </p>
                       <ul className="text-sm text-gray-600 space-y-1">
-                        {pillar.action_items.slice(0, 3).map((item, i) => (
+                        {pillar.action_items.slice(0, 3).map((item: string, i: number) => (
                           <li key={i} className="flex items-start gap-2">
                             <span className="text-primary-600">✓</span>
                             {item}
