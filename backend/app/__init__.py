@@ -31,6 +31,14 @@ def create_app(config_name='development'):
     from config.config import config
     app.config.from_object(config[config_name])
 
+    # Initialize extensions
+    from app.extensions import db
+    db.init_app(app)
+
+    # Import models to register them with SQLAlchemy
+    with app.app_context():
+        from app.models import User, Analysis, MonthlyReport, ChatMessage, DailyLog
+
     # Enable CORS for Next.js frontend
     CORS(app, resources={
         r"/api/*": {
