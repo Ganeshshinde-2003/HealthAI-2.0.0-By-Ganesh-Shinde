@@ -39,6 +39,10 @@ const nextConfig = {
           {
             key: 'Referrer-Policy',
             value: 'origin-when-cross-origin'
+          },
+          {
+            key: 'Content-Security-Policy',
+            value: "default-src 'self' http://localhost:* https:; connect-src 'self' http://localhost:* https: wss: ws://localhost:*; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; font-src 'self' data:; img-src 'self' data: http: https:; frame-ancestors 'self'"
           }
         ]
       }

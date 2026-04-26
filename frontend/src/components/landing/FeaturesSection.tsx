@@ -105,7 +105,7 @@ export function FeaturesSection() {
               </p>
             </div>
             <a
-              href="/mem/analyze"
+              href="/auth-check"
               className="px-6 py-3 bg-gradient-primary text-white font-semibold rounded-lg hover:shadow-card-hover transition-all whitespace-nowrap"
             >
               Try It Free

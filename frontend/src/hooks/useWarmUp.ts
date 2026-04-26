@@ -13,6 +13,8 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+import { apiClient } from '@/lib/api';
+import axios from 'axios';
 
 export function useWarmUp() {
   const hasWarmedUp = useRef(false);
@@ -23,35 +25,32 @@ export function useWarmUp() {
 
     const warmUpBackend = async () => {
       try {
-        const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api';
-
         console.log('🔥 Warming up backend...');
 
-        // Call warm-up endpoint
-        const response = await fetch(`${apiUrl}/warmup`, {
-          method: 'GET',
-          mode: 'cors',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-        });
-
-        if (response.ok) {
-          const data = await response.json();
-
-          if (data.database === 'connected') {
-            console.log('✅ Backend & Database ready!');
-          } else {
-            console.log('⚡ Backend ready (Database warming up...)');
+        // Call warm-up endpoint using axios directly
+        const response = await axios.get(
+          `${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api'}/warmup`,
+          {
+            timeout: 10000,
           }
+        );
+
+        const data = response.data;
+
+        if (data.database === 'connected') {
+          console.log('✅ Backend & Database ready!');
         } else {
-          console.log('⏳ Backend starting...');
+          console.log('⚡ Backend ready (Database: ' + data.database + ')');
         }
 
         hasWarmedUp.current = true;
       } catch (error) {
         // Silently fail - backend is probably just starting up
-        console.log('🔄 Services warming up in background...');
+        if (axios.isAxiosError(error)) {
+          console.log('⏳ Backend warming up... (' + error.message + ')');
+        } else {
+          console.log('🔄 Services warming up in background...');
+        }
         hasWarmedUp.current = true;
       }
     };

@@ -1,5 +1,6 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { ClientWarmUp } from '@/components/ClientWarmUp';
+import { AuthProvider } from '@/context/AuthContext';
 import '@/styles/globals.css';
 
 export const metadata: Metadata = {
@@ -7,7 +8,11 @@ export const metadata: Metadata = {
   description: 'AI-powered personal health intelligence for biomarker analysis, behavior change, and longitudinal wellness guidance.',
   keywords: 'health analysis, AI health, biomarkers, wellness, precision health',
   authors: [{ name: 'Ganesh Shinde' }],
-  viewport: 'width=device-width, initial-scale=1',
+};
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
   themeColor: '#667eea',
 };
 
@@ -19,8 +24,10 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className="font-sans antialiased">
-        <ClientWarmUp />
-        {children}
+        <AuthProvider>
+          <ClientWarmUp />
+          {children}
+        </AuthProvider>
       </body>
     </html>
   );

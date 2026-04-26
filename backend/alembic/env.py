@@ -16,7 +16,7 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
 
 # Import the db instance and models
 from app.extensions import db
-from app.models import User, Analysis, MonthlyReport, ChatMessage, DailyLog
+from app.models import User, Analysis, MonthlyReport, ChatMessage, DailyLog, RefreshToken, LoginAttempt
 
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.

@@ -43,7 +43,7 @@ export function HeroSection() {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
-                href="/mem/analyze"
+                href="/auth-check"
                 className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-primary text-white text-lg font-semibold rounded-lg shadow-lg hover:shadow-card-hover transition-all transform hover:scale-105"
               >
                 Start Your Free Analysis

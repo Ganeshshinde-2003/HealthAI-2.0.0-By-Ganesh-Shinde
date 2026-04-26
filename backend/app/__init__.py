@@ -31,13 +31,19 @@ def create_app(config_name='development'):
     from config.config import config
     app.config.from_object(config[config_name])
 
+    # Setup logging
+    from app.utils.logger import setup_logging, setup_request_logging
+    setup_logging(app)
+    setup_request_logging(app)
+
     # Initialize extensions
-    from app.extensions import db
+    from app.extensions import db, limiter
     db.init_app(app)
+    limiter.init_app(app)
 
     # Import models to register them with SQLAlchemy
     with app.app_context():
-        from app.models import User, Analysis, MonthlyReport, ChatMessage, DailyLog
+        from app.models import User, Analysis, MonthlyReport, ChatMessage, DailyLog, RefreshToken, LoginAttempt
 
     # Enable CORS for Next.js frontend
     CORS(app, resources={
@@ -57,10 +63,12 @@ def create_app(config_name='development'):
     from app.routes.analysis import analysis_bp
     from app.routes.monthly import monthly_bp
     from app.routes.chat import chat_bp
+    from app.routes.auth import auth_bp
 
     app.register_blueprint(health_bp, url_prefix='/api')
     app.register_blueprint(analysis_bp, url_prefix='/api')
     app.register_blueprint(monthly_bp, url_prefix='/api')
     app.register_blueprint(chat_bp, url_prefix='/api')
+    app.register_blueprint(auth_bp, url_prefix='/api/auth')
 
     return app

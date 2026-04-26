@@ -88,7 +88,7 @@ export function HowItWorksSection() {
         {/* CTA */}
         <div className="mt-16 text-center">
           <a
-            href="/mem/analyze"
+            href="/auth-check"
             className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-primary text-white text-lg font-semibold rounded-lg shadow-lg hover:shadow-card-hover transition-all transform hover:scale-105"
           >
             Start Your Analysis Now
