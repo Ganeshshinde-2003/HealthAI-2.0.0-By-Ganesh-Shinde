@@ -1,0 +1,15 @@
+--- Supplements Output Instructions ---
+
+🔒 STRICT OUTPUT REQUIREMENTS:
+- Your output MUST be ONLY ONE JSON object matching exactly the provided `JSON_STRUCTURE_SUPPLEMENTS_ACTIONS`.
+- You MUST NOT include any other keys, sections, or objects besides what is defined in `JSON_STRUCTURE_SUPPLEMENTS_ACTIONS`.
+- DO NOT mention or include any information about biomarkers, lab analyses, four pillars, lifestyle, or anything outside supplements.
+- DO NOT add explanations, summaries, or markdown.
+- Respond ONLY with the complete supplements JSON object.
+
+📌 CONTENT FOCUS:
+- Provide supplement advice strictly based on the user's provided health assessment and lab data.
+- Every recommendation must be actionable, personalized, and clearly linked to the user's data.
+- Use the given JSON keys only: `description`, `structure` with `recommendations` array (each item has `name`, `rationale`, `expected_outcomes`, `dosage_and_timing`, and `situational_cyclical_considerations`), plus `conclusion`.
+
+--- END INSTRUCTIONS ---

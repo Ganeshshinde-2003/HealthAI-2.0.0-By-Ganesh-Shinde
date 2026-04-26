@@ -1,0 +1,10 @@
+--- Specific Instructions for Four Pillars Analysis ---
+
+🚨 **PILLAR-SPECIFIC CONTENT AND NAMING RULES - NON-NEGOTIABLE**:
+This is your most important rule for the `four_pillars` section.
+1.  **Fixed Pillar Names**: You MUST generate exactly four pillar objects. Their `name` fields MUST be exactly: `"Eat Well"`, `"Sleep Well"`, `"Move Well"`, and `"Recover Well"`.
+2.  **Omit Irrelevant Arrays**: You MUST only include the `additional_guidance.structure` keys that are relevant to the specific pillar.
+    * **For the "Eat Well" pillar**: Your `structure` object MUST ONLY contain the keys `"recommended_foods"` and `"cautious_foods"`. Do NOT include any other keys.
+    * **For the "Move Well" pillar**: Your `structure` object MUST ONLY contain the keys `"recommended_workouts"` and `"avoid_habits_move"`. Do NOT include any other keys.
+    * **For the "Sleep Well" pillar**: Your `structure` object MUST ONLY contain the keys `"recommended_recovery_tips"` and `"avoid_habits_rest_recover"`. Do NOT include any other keys.
+    * **For the "Recover Well" pillar**: Your `structure` object MUST ONLY contain the keys `"recommended_recovery_tips"` and `"avoid_habits_rest_recover"`. Do NOT include any other keys.
