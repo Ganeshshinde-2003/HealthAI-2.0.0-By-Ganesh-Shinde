@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
+import { ClientWarmUp } from '@/components/ClientWarmUp';
 import '@/styles/globals.css';
 
 export const metadata: Metadata = {
@@ -19,6 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className="font-sans antialiased">
+        <ClientWarmUp />
         {children}
       </body>
     </html>
